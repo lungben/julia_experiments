@@ -42,14 +42,16 @@ https://youtu.be/gaJorAU644o
 
 ## Comparison of Julia and Python
 
-### Code Structure
-
 Python name | Python meaning | Julia name | Julia meaning
 ---|---|---|---
-function | duck-typing, no polymorphism | function | duck-typing, multiple dispatch to methods
+`def f(x,y):` | named function - duck-typing, no polymorphism | `fuction f(x,y)` | duck-typing, multiple dispatch to methods
+`lambda x: x` | anonymous function | `(x) -> x` | anonymous function
 class | classical OOP class, multiple inheritance | struct | data and constructor only, can inherit only from abstract types
-method | belongs to class | method | function implementation for concete parameter types
-module | single `.py` file | module | defined independenly of file strucutre
+method | function that belongs to a class (single dispatch on first argument `self`) | method | function implementation for concete parameter types (multiple dispatch on all arguments)
+`def __init__(self, x):` | constructor of a class, one per class | `MyStruct(x)` | Constructor method (multiple constructors can be defined, selected using multiple dispatch)
+module | namespace - defined as a single `.py` file | module | namespace - defined independenly of file strucutre
 package | directory with `__init__.py` file | NA | directory structure independent of logical structure
 package | bundled and installable, e.g. using `pip`, `conda` | package | includes dependencies (`Project.toml`), installable using `Pkg`, very light-weight
+@decorator | applies a higher order function to the following `def`, often used for wrappers | @macro | transformation which has Julia expressions (code) as input and output (very powerful)
+`with` block | context manager, used for opening and teardown of resources | `do` block | content of the block is passed as anonymous function to function before `do` statement
 
