@@ -49,6 +49,7 @@ Python name | Python meaning | Julia name | Julia meaning
 `class MyClass(Parent)` | classical OOP class, multiple inheritance | `struct MyStruct{TypeParameters} <: AbstractParent` | data and constructor only, types inside struct can be parametrized, can inherit only from abstract types
 `def __init__(self, x):` | constructor of a class, one per class | `MyStruct(x)` (outer constructor), `MyStruct(x) = new(x)` (inner constructor) | Constructor method (multiple constructors can be defined, selected using multiple dispatch)
 method | function that belongs to a class (single dispatch on first argument `self`) | method | function implementation for concete parameter types (multiple dispatch on all arguments)
+`a = MyClass(x), x.func(y)` | Creating an object, calling a method defined for its class | `a = MyStruct(x), func(x, y)` | Creating an object, calling a function on it - `func` can be specialized both on `x` and `y`
 module | namespace - defined as a single `.py` file | `module` | namespace - defined independenly of file strucutre
 package | directory with `__init__.py` file | NA | directory structure independent of logical structure
 package | bundled and installable, e.g. using `pip`, `conda` | package | includes dependencies (`Project.toml`), installable using `Pkg`, very light-weight
