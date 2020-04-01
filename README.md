@@ -36,3 +36,11 @@ https://juliadocs.github.io/Julia-Cheat-Sheet/
 
 https://www.hpcwire.com/2020/01/14/julia-programmings-dramatic-rise-in-hpc-and-elsewhere/
 
+### Videos
+
+https://youtu.be/gaJorAU644o
+
+## Comparison of Julia and Python
+
+see
+https://gist.github.com/lungben/a084e3e2da32ae95f17612b008e8a702
