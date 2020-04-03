@@ -1,5 +1,4 @@
-# julia_tutorial
-Julia Tutorial
+# julia_experiments
 
 
 ## Interesting Links
